@@ -413,9 +413,7 @@ div.output {
     align-items: center;
 }
 
-p.text-output {
-    text-align: justify;
-}
+
 
 .img-output .img-exp {
     max-height: 150px;
@@ -449,19 +447,21 @@ section#career-path .item {
 }
 */
 
+.career-block:hover {
+    box-shadow: rgba(0, 0, 0, 0.603) 1.5px 2px;
+    border-radius: 10px;
+}
+
 section#career-path li.career-item {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: center;
     color: #f2f2f2;
     margin: 0 1vw;
     cursor: pointer;
 }
 
-section#career-path li.career-item:hover>* {
-    box-shadow: rgba(0, 0, 0, 0.603) 1.5px 2px;
-}
 
 .job {
     background-color: #959595;
@@ -588,6 +588,7 @@ section#contact .contact-links {
 @media only screen and (max-width:1300px) {
     #header {
         display: none;
+        z-index: 1;
     }
 
     nav {
@@ -709,41 +710,43 @@ section#contact .contact-links {
 
     div.career-inner {
         flex-direction: row-reverse;
-        justify-content: start;
-        align-items: center;
+        justify-content: center;
+        align-items: flex-start;
         margin: auto;
     }
 
     ul.career {
         flex-direction: column;
         justify-content: start;
-        align-items: center;
+        align-items: flex-end;
     }
 
     section#career-path li.career-item {
         margin: 0.5vh 0 0.5vh 5vw;
+        flex-direction: row;
     }
 
-    section#career-path li.career-item:hover>* {
-        box-shadow: none;
+    li.career-item .career-block {
+        width: min-content;
     }
+
+
 
     div.bar,
     div.bar-lg {
-        position: relative;
         top: -7vh;
         left: 100%;
         width: 15px;
         height: 5px;
         margin: 0;
+        z-index: 0;
     }
 
     div.hz-bar {
         background-color: #959595;
         width: 5px;
-        height: 560px;
-        margin-right: 30px;
-        margin-left: 10px;
+        height: 750px;
+        margin-right: 10px;
     }
 
     section#career-path .job {
@@ -754,8 +757,7 @@ section#contact .contact-links {
     .firm,
     .job {
         text-align: center;
-        min-width: 25vw;
-        max-width: 50vw;
+        width: auto;
         padding: 0.5vh;
     }
 
@@ -778,10 +780,10 @@ section#contact .contact-links {
 
     .img-output .img-exp {
         position: relative;
-        margin: 5% 1vw 1vh 0;
+        margin: 3% 1vw 1vh 0;
         float: left;
-        max-width: 50vw;
-        max-height: 15vh;
+        max-width: 16vh;
+        max-height: 12vh;
     }
 }
 
@@ -805,8 +807,8 @@ section#contact .contact-links {
         font-size: 85%;
     }
 
-    div.hz-bar {
-        height: 660px;
+    p.text-output {
+        max-width: min-content;
     }
 
     section#work img {
