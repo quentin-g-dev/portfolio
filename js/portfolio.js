@@ -75,7 +75,7 @@ function copyMailConfirm() {
 }
 
 function copyMail() {
-    navigator.clipboard.writeText("quentin@quentin-g.com").then(copyMailConfirm);
+    navigator.clipboard.writeText("qgermain@gmail.com").then(copyMailConfirm);
 }
 
 //////////////////////////////////////responsiveHeader
